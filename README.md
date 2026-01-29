@@ -1,75 +1,20 @@
-# Access Initiation (React + Vite)
+# Access Initiation (Vanilla JS Version)
 
-A mobile-first, timed access initiation experience.
+This is a zero-dependency version of the Access Initiation app
+implemented in plain JavaScript (no React, no build step).
 
-## Features
+## How to use with GitHub Pages
 
-- 8-second instinct window per question
-- Randomized question pool (up to 21 questions per run)
-- Touch-friendly, mobile-first UI
-- Designed for cultural and experiential gating
+1. Create a new GitHub repo.
+2. Put **all files from this folder** at the **root** of the repo:
+   - `index.html`
+   - `app.js`
+   - `README.md`
+   - `LICENSE`
+3. Go to **Settings → Pages** in the repo:
+   - Source: `main` (or your branch)
+   - Folder: `/ (root)`
+4. Visit: `https://YOUR-USER.github.io/YOUR-REPO-NAME/`
 
----
-
-## Local Development
-
-```bash
-npm install
-npm run dev
-```
-
-Open the printed localhost URL (usually http://localhost:5173) and you should see
-the orange ACCESS INITIATION screen.
-
----
-
-## GitHub Pages Deployment (via Actions)
-
-This project is preconfigured with:
-
-- `vite.config.js` using `base: '/access-initiation/'`
-- a GitHub Actions workflow at `.github/workflows/deploy.yml`
-
-### 1. Match the repo name
-
-If your GitHub repo is **not** named `access-initiation`, edit `vite.config.js`:
-
-```js
-export default defineConfig({
-  plugins: [react()],
-  base: '/YOUR-REPO-NAME/', // change this
-})
-```
-
-Commit that change.
-
-### 2. Push to GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial access initiation app"
-git branch -M main
-git remote add origin https://github.com/YOUR-USER/YOUR-REPO-NAME.git
-git push -u origin main
-```
-
-### 3. Enable GitHub Pages
-
-In your repo on GitHub:
-
-- Go to **Settings → Pages**
-- Under "Build and deployment", choose **GitHub Actions**
-- GitHub will automatically use `.github/workflows/deploy.yml`
-
-The workflow will:
-
-- install deps
-- run `npm run build`
-- deploy the `dist/` folder to GitHub Pages
-
-Your live URL will be:
-
-```
-https://YOUR-USER.github.io/YOUR-REPO-NAME/
-```
+There is no build process. GitHub only needs to serve `index.html`
+and `app.js`, and the app will run.
