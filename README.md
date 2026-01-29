@@ -8,9 +8,10 @@ A mobile-first, timed access initiation experience.
 - Touch-friendly UI
 - Designed for cultural and experiential gating
 
-## Setup
-Recommended with Vite:
+## Quick Run (no bundler, just browser modules)
+You can open `index.html` directly in a modern browser and it will load React from CDN.
 
+## Recommended Setup (Vite)
 ```bash
 npm create vite@latest access-initiation -- --template react
 cd access-initiation
@@ -18,4 +19,4 @@ npm install
 npm run dev
 ```
 
-Replace `src/App.jsx` with the included file.
+Then replace `src/App.jsx` with the included `App.jsx`.
